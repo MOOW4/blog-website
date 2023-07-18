@@ -37,7 +37,12 @@ app.get("/compose", (req,res) => {
 
 });
 
+app.post("/compose", (req,res) => {
+  console.log(req.body.titleSubmit);
+  console.log(req.body.postSubmit);
 
+  res.redirect("/compose");
+});
 
 
 
