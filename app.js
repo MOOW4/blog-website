@@ -13,6 +13,8 @@ const app = express();
 //* Variables :
 let posts = [];
 
+
+//*
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -53,7 +55,9 @@ app.post("/compose", (req,res) => {
   res.redirect("/");
 });
 
-
+app.get("/posts/:postName", (req,res) => {
+  console.log(req.params.postName);
+});
 
 
 app.listen(3000, function() {
