@@ -56,7 +56,13 @@ app.post("/compose", (req,res) => {
 });
 
 app.get("/posts/:postName", (req,res) => {
-  console.log(req.params.postName);
+  //console.log(req.params.postName);
+  posts.forEach((post) => {
+    if(post.title.toLowerCase() == req.params.postName.toLowerCase()){
+      console.log("Match found !");
+    }
+  });
+  
 });
 
 
