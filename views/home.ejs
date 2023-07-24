@@ -5,8 +5,14 @@
 <p><%= contentHome %></p>
 
 <% posts.forEach((post) => { %>
+    <% let route = "/posts/"+ post.title.replace(/\s+/g, '-') %>
+    <% console.log(route);%>
+
     <h2><%= post.title %></h2>
-    <p><%= post.body.slice(0, 100) + "..." %></p>
+    <p>
+        <%= post.body.slice(0, 100) + "..." %>
+        <a href=<%=route%> >Read more</a>
+    </p>
 
     <% }); %>
 
