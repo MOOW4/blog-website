@@ -11,7 +11,7 @@
     <h2><%= post.title %></h2>
     <p>
         <%= post.body.slice(0, 100) + "..." %>
-        <a href=<%=route%> >Read more</a>
+        <a href="/posts/<%=post._id%>">Read More</a>
     </p>
 
     <% }); %>
